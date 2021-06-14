@@ -57,14 +57,14 @@ document.body.addEventListener("click", (e) => {
 
         e.target.parentElement.parentElement.classList.toggle("term");
         e.target.parentElement.parentElement.classList.toggle("divNT");
-        // e.target.parentElement.previousElementSibling.classList.toggle("term");
-        // e.target.parentElement.previousElementSibling.classList.toggle("divNT");
+        e.target.parentElement.previousElementSibling.classList.toggle("term");
+        e.target.parentElement.previousElementSibling.classList.toggle("divNT");
 
     } else if (e.target.className == "far fa-trash-alt") {
         let clearElem = confirm("Voulez-vous supprimer cet élément?");
         if (clearElem == true){
             e.target.parentElement.parentElement.remove()
-        }
+        };
         
     } else if (e.target == btnTerm) {
 
@@ -106,9 +106,9 @@ document.body.addEventListener("click", (e) => {
 
     } else if (e.target.className == "far fa-save") {
 
-        e.target.parentElement.previousElementSibling.removeAttribute("readonly")
-        e.target.parentElement.previousElementSibling.focus()
-        e.target.parentElement.previousElementSibling.style.backgroundColor = "white"
+        e.target.parentElement.previousElementSibling.removeAttribute("readonly");
+        e.target.parentElement.previousElementSibling.focus();
+        e.target.parentElement.previousElementSibling.style.backgroundColor = "white";
 
         e.target.parentElement.previousElementSibling.addEventListener("focusout", () => {
             e.target.parentElement.previousElementSibling.setAttribute("readonly", "readonly")
